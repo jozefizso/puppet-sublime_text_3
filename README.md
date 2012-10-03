@@ -1,4 +1,7 @@
-# Puppet sublime_text_2 for Boxen
+# Sublime Text 2 Puppet Module for Boxen
 
-FIXME: update me bro
+## Usage
 
+```puppet
+include sublime_text_2
+```
