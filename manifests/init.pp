@@ -1,3 +1,8 @@
+# Install Sublime Text 2 into /Applications
+#
+# Usage:
+#
+#     include sublime_text_2
 class sublime_text_2 {
   package { 'SublimeText2':
     provider => 'appdmg',
