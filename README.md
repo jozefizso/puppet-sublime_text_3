@@ -5,3 +5,7 @@
 ```puppet
 include sublime_text_2
 ```
+
+## Required Puppet Modules
+
+None.
