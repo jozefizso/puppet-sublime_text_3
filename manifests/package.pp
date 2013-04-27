@@ -5,7 +5,7 @@
 #
 # Examples
 #
-#   sublime_text_2::plugin { 'Emmet':
+#   sublime_text_2::package { 'Emmet':
 #     source => 'sergeche/emmet-sublime'
 #   }
 define sublime_text_2::package($source) {
