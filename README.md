@@ -8,6 +8,9 @@ Install [Sublime Text 2](http://www.sublimetext.com//), a text-editor/IDE for Ma
 
 ```puppet
 include sublime_text_2
+sublime_text_2::package { 'Emmet':
+  source => 'sergeche/emmet-sublime'
+}
 ```
 
 ## Required Puppet Modules
