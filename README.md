@@ -8,6 +8,8 @@ Install [Sublime Text 2](http://www.sublimetext.com/2), a text-editor/IDE for Ma
 
 ```puppet
 include sublime_text_2
+include sublime_text_2::package_control
+
 sublime_text_2::package { 'Emmet':
   source => 'sergeche/emmet-sublime'
 }
