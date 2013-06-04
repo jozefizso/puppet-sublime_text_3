@@ -4,10 +4,15 @@
 #
 #   include sublime_text_2::config
 class sublime_text_2::config {
-  $dir        = "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2"
-  $packagedir = "${dir}/Packages"
+  $dir = "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2"
+  $package_dir = "${dir}/Packages"
+  $user_package_dir = "${package_dir}/User"
+  $installed_package_dir = "${dir}/Installed Packages"
 
-  file { [$dir, $packagedir]:
-    ensure => directory
-  }
+  anchor { [
+    $dir,
+    $package_dir,
+    $user_package_dir,
+    $installed_package_dir
+  ]: }
 }

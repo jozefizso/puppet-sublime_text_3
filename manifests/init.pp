@@ -5,6 +5,7 @@
 #     include sublime_text_2
 class sublime_text_2 {
   include boxen::config
+  require sublime_text_2::config
 
   package { 'SublimeText2':
     provider => 'appdmg',
