@@ -1,24 +1,12 @@
 require 'spec_helper'
 
 describe 'sublime_text_2::package' do
+  let(:facts) { default_test_facts }
+
   let(:title) { 'test' }
   let(:params) { {:source => 'https://github.com/foo/bar'} }
-  let(:facts) do
-    {
-      :luser      => 'testuser',
-      :boxen_home => '/opt/boxen',
-    }
-  end
-  let(:package_dir) { "/Users/#{facts[:luser]}/Library/Application Support/Sublime Text 2/Packages" }
-
-  # FIXME - rspec-puppet should properly stub facts instead of this hack.
-  before :each do
-    facts.each do |fact, val|
-      Facter.add(fact.to_s) do
-        setcode { val }
-      end
-    end
-  end
+  
+  let(:package_dir) { "/Users/#{facts[:boxen_user]}/Library/Application Support/Sublime Text 2/Packages" }
 
   it { should include_class('sublime_text_2::config') }
 
