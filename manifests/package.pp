@@ -12,13 +12,13 @@ define sublime_text_2::package($source) {
   require sublime_text_2::config
 
   if $source =~ /\.sublime-package$/ {
-    $package_file = "${sublime_text_2::config::installed_package_dir}/${name}.sublime-package"
-    exec { "download sublime text 2 package '${name}'":
+    $package_file = "${sublime_text_2::config::installed_packages_dir}/${name}.sublime-package"
+    exec { "download Sublime Text 2 package '${name}'":
       command => "curl ${source} -L -q -o '${package_file}'",
       creates => $package_file
     }
   } else {
-    repository { "${sublime_text_2::config::package_dir}/${name}":
+    repository { "${sublime_text_2::config::packages_dir}/${name}":
       source => $source
     }
   }

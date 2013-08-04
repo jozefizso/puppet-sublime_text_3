@@ -1,15 +1,15 @@
-# Internal: Prepare your system for Sublime Text 2 packages.
+# Internal: Sublime Text 2 configuration - user preferences and packages directories.
 #
-# Examples
-#
-#   include sublime_text_2::config
 class sublime_text_2::config {
   $dir = "/Users/${::boxen_user}/Library/Application Support/Sublime Text 2"
-  $package_dir = "${dir}/Packages"
-  $user_package_dir = "${package_dir}/User"
-  $installed_package_dir = "${dir}/Installed Packages"
+  $packages_dir = "${dir}/Packages"
+  $user_packages_dir = "${packages_dir}/User"
+  $installed_packages_dir = "${dir}/Installed Packages"
 
-  file { [$dir, $package_dir, $user_package_dir, $installed_package_dir]:
-    ensure => directory
-  }
+  anchor { [
+    $dir,
+    $packages_dir,
+    $user_packages_dir,
+    $installed_packages_dir
+  ]: }
 }

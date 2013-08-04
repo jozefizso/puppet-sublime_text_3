@@ -12,6 +12,15 @@ class sublime_text_2 {
     source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.2.dmg';
   }
 
+  file { [
+    $sublime_text_2::config::dir,
+    $sublime_text_2::config::packages_dir,
+    $sublime_text_2::config::user_packages_dir,
+    $sublime_text_2::config::installed_packages_dir
+  ]:
+    ensure => directory
+  }
+
   file { "${boxen::config::bindir}/subl":
     ensure  => link,
     target  => '/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl',
