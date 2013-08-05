@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe 'sublime_text_2::config' do
+describe 'sublime_text_3::config' do
   let(:facts) { default_test_facts }
 
-  let(:sublimedir) { "/Users/#{facts[:boxen_user]}/Library/Application Support/Sublime Text 2" }
+  let(:sublimedir) { "/Users/#{facts[:boxen_user]}/Library/Application Support/Sublime Text 3" }
   let(:packages_dir) { "#{sublimedir}/Packages" }
   let(:user_packages_dir) { "#{packages_dir}/User" }
   let(:installed_packages_dir) { "#{sublimedir}/Installed Packages" }
