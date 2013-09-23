@@ -1,6 +1,7 @@
 # Sublime Text 3 Puppet Module for Boxen
 
 [![Build Status](https://travis-ci.org/jozefizso/puppet-sublime_text_3.png?branch=master)](https://travis-ci.org/jozefizso/puppet-sublime_text_3)
+[![Dependency Status](https://gemnasium.com/jozefizso/puppet-sublime_text_3.png)](https://gemnasium.com/jozefizso/puppet-sublime_text_3)
 
 Install [Sublime Text 3 beta](http://www.sublimetext.com/3), a text-editor/IDE for Mac
 
