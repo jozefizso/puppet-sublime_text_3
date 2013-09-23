@@ -16,7 +16,8 @@ define sublime_text_3::package($source, $branch = 'master') {
     $package_file = "${sublime_text_3::config::installed_packages_dir}/${name}.sublime-package"
     exec { "download Sublime Text 3 package '${name}'":
       command => "curl ${source} -L -q -o '${package_file}'",
-      creates => $package_file
+      creates => $package_file,
+      require => File[$sublime_text_3::config::installed_packages_dir]
     }
   } else {
     repository { "${sublime_text_3::config::packages_dir}/${name}":

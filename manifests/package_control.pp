@@ -6,7 +6,6 @@
 #     include sublime_text_3::package_control
 class sublime_text_3::package_control {
   sublime_text_3::package { 'Package Control':
-    source => 'wbond/sublime_package_control',
-    branch => 'python3'
+    source => 'https://sublime.wbond.net/Package%20Control.sublime-package'
   }
 }

@@ -5,8 +5,7 @@ describe 'sublime_text_3::package_control' do
 
   it do
     should contain_sublime_text_3__package('Package Control').with({
-      :source => 'wbond/sublime_package_control',
-      :branch => 'python3'
+      :source => 'https://sublime.wbond.net/Package%20Control.sublime-package'
     })
   end
 end

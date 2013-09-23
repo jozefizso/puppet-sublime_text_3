@@ -60,7 +60,8 @@ describe 'sublime_text_3::package' do
 
       should contain_exec('download Sublime Text 3 package \'MyPackage\'').with({
         :command => "curl #{params[:source]} -L -q -o '#{packages_dir}/Installed Packages/MyPackage.sublime-package'",
-        :creates => "#{packages_dir}/Installed Packages/MyPackage.sublime-package"
+        :creates => "#{packages_dir}/Installed Packages/MyPackage.sublime-package",
+        :require => "File[#{packages_dir}/Installed Packages]"
       })
     end
   end
