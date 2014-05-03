@@ -8,4 +8,4 @@ rvm:
 env:
   global:
     # encrypted GITHUB_API_TOKEN for librarian-puppet
-    secure: "iDN5Q63C84XHRtLWk58pqR8PPBbC+xa0D33U6SyyrCoiQPh/uEJg0nW3gQ6akkOgs+H2ULj9kIjI+Qb/WEIAlDmA+tCiGDWXfBVtfvPNpENem14ovUkfE2HaRWE40d+cYFT6CmjrRA8t3yD2kGHRFeMh3gwlfdCtyf8TydDNG7I="
+    secure: "J30hxsH4RKrKe/yZG5kunQwAfD5e/q3N4Cy8hAk+eGpAvEKqA3K6K6K6vP4FN+WWc1YnPZWu+hZZSt6rEoSV388soZhM82DjVk0NiwZ7aNWlf9nmDUwJDDzEOYmtD5ORt6bsPj8MsoyuhoTBzLkXo3d+FMj+PQZa3Zo/NkyyXys="
